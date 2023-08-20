@@ -1,0 +1,67 @@
+:root {
+  box-sizing: border-box;
+  --main-size: 30rem; /* 480px */
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+.container {
+  margin: auto auto;
+  flex: 0 0 auto;
+}
+.flex-top-box {
+  width: min(max(var(--main-size), 100%), calc(var(--main-size) * 2));
+  min-height: var(--main-size);
+  border: 0.0625rem solid black;
+  background-color: #D2DAED;
+  /*background-color: #EA906C;*/
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.flex-box {
+  /*min-height: 2.5rem;*/
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  border: 0.0625rem solid goldenrod;
+}
+
+.heading {
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.logo {
+  min-width: 10%;
+  flex: 0 0 auto;
+}
+.logo h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+.nav {
+  min-width: 10%;
+  flex: 0 0 auto;
+}
+.nav button {
+  min-width: 4rem;
+  margin: 0;
+  padding: 0;
+  border: 0.0625rem solid black;
+}
+
+.content {
+  flex: 10 0 10%;
+}
+.footer {
+  flex: 1 0 10%
+}
