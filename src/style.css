@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
 :root {
   box-sizing: border-box;
-  --main-size: 30rem; /* 480px */
+  --main-size: 60rem; /* 480px */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana sans-serif;
+  font-family: 'MonteCarlo', cursive;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -17,6 +21,9 @@ body {
 .container {
   margin: auto auto;
   flex: 0 0 auto;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .flex-top-box {
   width: min(max(var(--main-size), 100%), calc(var(--main-size) * 2));
@@ -33,12 +40,13 @@ body {
   flex: 0 0 100%;
   display: flex;
   flex-flow: row wrap;
-  border: 0.0625rem solid goldenrod;
+  /*border: 0.0625rem solid goldenrod;*/
 }
 
 .heading {
   flex-flow: row wrap;
   justify-content: space-between;
+  padding: 0 8rem;
 }
 .logo {
   min-width: 10%;
@@ -46,22 +54,63 @@ body {
 }
 .logo h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #F2C20B;
 }
 .nav {
   min-width: 10%;
   flex: 0 0 auto;
+  gap: 2rem;
+  align-items: center;
 }
 .nav button {
-  min-width: 4rem;
+  min-width: 1rem;
   margin: 0;
   padding: 0;
-  border: 0.0625rem solid black;
+  border: 0;
+  /*border: 0.0625rem solid black;*/
+  background-color: transparent;
+  color: #ddd;
+}
+.nav button:hover {
+  color: #fff;
+  cursor: pointer;
+  border-bottom: 0.125rem solid #fff;
 }
 
 .content {
-  flex: 10 0 10%;
+  padding: 0 8rem;
 }
+.menu {
+  /*background-image: url('./mango.jpg');*/
+  background-size: cover;
+  background-attachment: fixed;
+  /*flex: 1 0 100%;*/
+}
+.mango {
+  background-image: url('./mango.jpg');
+}
+.orange {
+  background-image: url('./orange.jpg');
+}
+.strawberry {
+  background-image: url('./strawberry.jpg');
+}
+.content p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4.5rem;
+  width: 25rem;
+  color: #fff;
+  margin: 0;
+}
+
 .footer {
-  flex: 1 0 10%
+  padding: 0 8rem;
+  justify-content: center;
+}
+.footer p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: .7rem;
+  margin: .5rem 0;
+  color: #ddd;
 }
