@@ -63,6 +63,18 @@ const deployLayout = () => {
     .textContent = 'Menu';
   document.querySelector('.nav > button:nth-child(3)')
     .textContent = 'Contact';
+
+  //footer
+  createLayout('p', 1,
+    document.querySelector('.footer'));
+  document.querySelector('.footer p')
+    .textContent = 'Photo by ';
+  createLayout('a', 1,
+    document.querySelector('.footer p'));
+  document.querySelector('.footer p a')
+    .setAttribute('href', 'https://www.pexels.com/photo/mango-juice-in-clear-glass-bottle-4955257/');
+  document.querySelector('.footer p a')
+    .textContent = 'Roman Odintsov';
 }
 
 export {

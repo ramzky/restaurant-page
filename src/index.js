@@ -1,5 +1,7 @@
 import { deployLayout, clearLayout } from './componentLayout';
 import { deployHome } from './componentHome';
+import { deployContent } from './componentContent';
+import { deployContact } from './componentContact';
 import './style.css';
 /*
 
@@ -46,11 +48,18 @@ const componentLayout = (function() {
   };
 })();
 
-//const test = componentLayout;
-//test.test();
-deployLayout();
-deployHome();
-//clearLayout(document.querySelector('.nav'));
+function controller() {
+  deployLayout();
+  deployHome();
 
+  const homeBtn = document.querySelector('.nav > button:nth-child(1)');
+  homeBtn.addEventListener('click', () => deployHome());
 
-//console.log('test');
+  const menuBtn = document.querySelector('.nav > button:nth-child(2)');
+  menuBtn.addEventListener('click', () => deployContent());
+
+  const contactBtn = document.querySelector('.nav > button:nth-child(3)');
+  contactBtn.addEventListener('click', () => deployContact());
+}
+
+controller();

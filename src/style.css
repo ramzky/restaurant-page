@@ -50,6 +50,9 @@ body {
   flex-flow: row wrap;
   /*border: 0.0625rem solid goldenrod;*/
 }
+.flex-item {
+  flex: 0 0 100%;
+}
 
 .heading {
   flex-flow: row wrap;
@@ -92,12 +95,12 @@ body {
 
 .content {
   padding: 0 20%;
-  gap: 1rem;
+  gap: 2rem;
 }
 .menu {
   /*background-image: url('./mango.jpg');*/
-  /*background-size: cover;
-  background-attachment: fixed;*/
+  background-size: cover;
+  background-attachment: fixed;
   border-radius: 2rem;
   /*flex: 1 0 100%;*/
   /*box-shadow: inset 1rem 1rem rgba(0,0,0,.6), inset -1rem -1rem rgba(0,0,0,.6);*/
@@ -116,16 +119,16 @@ body {
   background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./mango.jpg');
 }
 .orange {
-  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./orange.jpg');
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./orange.jpg');
 }
 .strawberry {
-  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./strawberry.jpg');
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./strawberry.jpg');
 }
 .melon {
-  background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./melon.jpg');
+  background-image: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)), url('./melon.jpg');
 }
 .content .home-para {
-  font-family: 'Times New Roman', Times, serif;
+  /*font-family: 'Times New Roman', Times, serif;*/
   font-size: 4.5rem;
   width: 25rem;
   color: #fff;
@@ -145,6 +148,13 @@ body {
 }
 .menu p:nth-child(2) {
   font-size: 1.2rem;
+}
+
+.content .contact-para {
+  margin: 0;
+}
+.content .details {
+  font-size: 1.5rem;
 }
 
 .footer {
