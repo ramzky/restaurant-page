@@ -92,11 +92,12 @@ body {
 
 .content {
   padding: 0 20%;
+  gap: 1rem;
 }
-.menu > div {
+.menu {
   /*background-image: url('./mango.jpg');*/
-  background-size: cover;
-  background-attachment: fixed;
+  /*background-size: cover;
+  background-attachment: fixed;*/
   border-radius: 2rem;
   /*flex: 1 0 100%;*/
   /*box-shadow: inset 1rem 1rem rgba(0,0,0,.6), inset -1rem -1rem rgba(0,0,0,.6);*/
@@ -107,7 +108,7 @@ body {
   flex: 0 0 100%;
 
 }
-.menu > div:hover {
+.menu:hover {
   cursor: pointer;
   border: .125rem solid #F2C20B;
 }
@@ -126,6 +127,7 @@ body {
 .content .home-para {
   font-family: 'Times New Roman', Times, serif;
   font-size: 4.5rem;
+  width: 25rem;
   color: #fff;
   margin: 0;
 }
@@ -138,10 +140,10 @@ body {
   width: 100%;
   margin: .5rem 0;
 }
-.content p:nth-child(1) {
+.menu p:nth-child(1) {
   text-align: center;
 }
-.content p:nth-child(2) {
+.menu p:nth-child(2) {
   font-size: 1.2rem;
 }
 

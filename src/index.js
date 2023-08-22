@@ -1,4 +1,5 @@
-import { deployLayout } from './componentLayout';
+import { deployLayout, clearLayout } from './componentLayout';
+import { deployHome } from './componentHome';
 import './style.css';
 /*
 
@@ -24,7 +25,7 @@ const componentLayout = (function() {
     generateElement(elem, count);
     for (let i = 0; i < count; i++) {
       if (classes[i] === undefined) continue;
-      elems[0].classList.add(...classes[i])
+      elems[i].classList.add(...classes[i])
     }
     appendElementTo(node);
 
@@ -32,24 +33,24 @@ const componentLayout = (function() {
     //test adding to style tag in head
   };
 
-  const test = () => {
+  const deployLayout = () => {
     createLayout('div', 1, body, ['main-container']);
     createLayout('div', 1,
       document.querySelector('.main-container'),
-      ['flex-top-box', 'container'])
-  }
+      ['flex-top-box', 'container']);
+
+  };
 
   return {
-    generateElement,
-    appendElementTo,
-    createLayout,
-    test
+    //use module
   };
 })();
 
 //const test = componentLayout;
 //test.test();
 deployLayout();
+deployHome();
+//clearLayout(document.querySelector('.nav'));
 
 
 //console.log('test');
